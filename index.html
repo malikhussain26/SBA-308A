@@ -11,30 +11,32 @@
     <div id="app">
         <header>
             <h1>Naruto Application</h1>
-            <nav>
-                <ul id="character-list">
-                    <li><a href="#">Characters</a></li>
-                    <li><a href="#">Clans</a></li>
-                    <li><a href="#">Villages</a></li>
-                </ul>
-            </nav>
+            <p>Learn About Naruto Characters</p>
         </header>
     
 
-    <main>
-        <section id="character-search">
-            <h2>Search for a Character</h2>
-            <input type="text" id="character-search-input" placeholder="Enter Character Name">
-            <button id="search-button" onclick="searchCharacters(document.getElementById('character-search-input').value)">Search</button>
-        </section>
-
-        <section id="character-details">
-            <h2>Character Details</h2>
-            <div id="character-image"></div>
-            <div id="character-name"></div>
-            <div id="character-description"></div>
-        </section>
-    </main>
+        <main>
+            <section id="search">
+              <h2>Search</h2>
+              <input type="text" id="search-input" placeholder="Enter search term">
+              <button id="search-button">Search</button>
+            </section>
+          
+            <section id="search-results">
+              <h2>Search Results</h2>
+              <div id="results-container"></div>
+            </section>
+          
+            <section id="character-details">
+              <h2>Character Details</h2>
+              <div id="character-info"></div>
+            </section>
+          
+            <section id="clan-info">
+              <h2>Clan Info</h2>
+              <div id="clan-details"></div>
+            </section>
+          </main>
 
     <footer>
         <p>&copy; 2024 Naruto Web Application</p>
