@@ -12,7 +12,7 @@
         <header>
             <h1>Naruto Application</h1>
             <nav>
-                <ul>
+                <ul id="character-list">
                     <li><a href="#">Characters</a></li>
                     <li><a href="#">Clans</a></li>
                     <li><a href="#">Villages</a></li>
@@ -25,7 +25,7 @@
         <section id="character-search">
             <h2>Search for a Character</h2>
             <input type="text" id="character-search-input" placeholder="Enter Character Name">
-            <button id="search-button">Search</button>
+            <button id="search-button" onclick="searchCharacters(document.getElementById('character-search-input').value)">Search</button>
         </section>
 
         <section id="character-details">
