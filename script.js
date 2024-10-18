@@ -34,7 +34,6 @@ searchButton.addEventListener('click', async () => {
       console.log('Search results:', data);
   
       searchResults.innerHTML = `
-      <h2>Search Results</h2>
       <ul>
         ${data.characters.map((character) => `
           <li>
@@ -42,11 +41,11 @@ searchButton.addEventListener('click', async () => {
             <ul>
               <li>Debut: ${character.debut.manga}</li>
               <li>Family: ${character.family.father} and ${character.family.mother}</li>
-              <li>Jutsu: ${character.jutsu && character.jutsu.length > 0 ? character.jutsu.slice(0, 5).join(', ') : ''}</li>
-              <li>Nature Type: ${character.natureType && character.natureType.length > 0 ? character.natureType.slice(0, 5).join(', ') : ''}</li>
+              <li>Jutsu: ${character.jutsu.slice(0, 5).join(', ')}</li>
+              <li>Nature Type: ${character.natureType.slice(0, 5).join(', ')}</li>
               <li>Personal: ${character.personal.birthdate}, ${character.personal.sex}, ${character.personal.age && character.personal.age.current ? character.personal.age.current : ''}, ${character.personal.height && character.personal.height.current ? character.personal.height.current : ''}, ${character.personal.weight && character.personal.weight.current ? character.personal.weight.current : ''}</li>
               <li>Rank: ${character.rank && character.rank.ninjaRank ? character.rank.ninjaRank.name : ''}</li>
-              <li>Tools: ${character.tools && character.tools.length > 0 ? character.tools.slice(0, 5).join(', ') : ''}</li>
+              <li>Tools: ${character.tools.slice(0, 5).join(', ')}</li>
             </ul>
           </li>
         `).join('')}
@@ -91,7 +90,7 @@ searchButton.addEventListener('click', async () => {
 
 // createData(newData);
 
-// Promise
+// Promise to search for akatsuki members
 function searchAkatsukiMembers(searchTerm) {
     return new Promise((resolve, reject) => {
       fetch(`https://dattebayo-api.onrender.com/akatsuki`)
@@ -116,7 +115,7 @@ function searchAkatsukiMembers(searchTerm) {
 searchAkatsukiMembers(searchTerm)
   .then(data => {
     console.log('Akatsuki members:', data);
-    // Update the UI with the Akatsuki members
+    // Updates the UI with the Akatsuki members
   })
   .catch(error => {
     console.error(error);

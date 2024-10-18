@@ -1,0 +1,103 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f99427;
+  }
+  
+  h1, h2, h3 {
+    margin: 1rem 0;
+    font-weight: bold;
+  }
+  
+  p {
+    margin: 0.5rem 0;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #000000; /* Orange like Naruto's jumpsuit */
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #fff; /* White text */
+    font-size: 2rem;
+  }
+  
+  p {
+    color: #777; /* Lighter grey text */
+  }
+  
+  /* Main Styles */
+  main {
+    padding: 1rem;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    background-color: #fafafa; /* Light grey background */
+    padding: 1rem;
+  }
+  
+  #search {
+    border-left: 5px solid #007bff; /* Blue border like Sasuke's outfit */
+    padding-left: 1rem;
+  }
+
+  #search {
+    text-align: center;
+  }
+  
+  #search-results {
+    border-top: 5px solid #ff9900; /* Orange border like Naruto's hair */
+    padding-top: 1rem;
+  }
+  
+  /* Search Bar Styles */
+  input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 3px;
+    background-color: #007bff; /* Blue background like Sasuke's outfit */
+    color: #fff; /* White text */
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #f99427; /* Darker blue on hover */
+  }
+  
+  /* Search Results Styles */
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 1rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  ul li ul {
+    padding-left: 1.5rem;
+  }
+  
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #000000; /* Light grey background */
+  }
