@@ -1,4 +1,4 @@
-console.log("hello world")
+console.log("Hello Naruto Universe!")
 const apiBaseUrl = 'https://dattebayo-api.onrender.com'
 
 async function fetchData() {
@@ -50,8 +50,7 @@ searchButton.addEventListener('click', async () => {
               </ul>
             </li>
           `).join('')}
-        </ul>
-      `;
+        </ul>`;
   
       // Clear the results container and append the new results
       resultsContainer.innerHTML = '';
@@ -60,3 +59,54 @@ searchButton.addEventListener('click', async () => {
       console.error('Error searching:', error);
     }
   });
+
+
+  // createData that will make a Post request to the API using await/async
+  // (I believe this API cannot use POST, Put, or Patch)
+  //It was too late before I noticed this.
+  // But this is the code I would use if it could use those methods. 
+//   async function createData(data) {
+//     try {
+//         const response = await fetch('https://dattebayo-api.onrender.com/characters', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify(data)
+//         });
+//         if (response.ok) {
+//             console.log('Data created successfully');
+//         } else {
+//             console.error('Error creating data:', response.status);
+//         }
+//     } catch (error) {
+//         console.error('Error creating data:', error);
+//     }
+// }
+// const newData = {
+//     name: 'Malik',
+//     age: 27
+// };
+
+// createData(newData);
+
+// Promise
+
+function searchAkatsukiMembers(searchTerm) {
+    return new Promise((resolve, reject) => {
+      fetch(`https://dattebayo-api.onrender.com/teams?name=Akatsuki&members=${searchTerm}`)
+        .then(response => {
+          if (response.ok) {
+            return response.json();
+          } else {
+            reject('Error searching for Akatsuki members:', response.status);
+          }
+        })
+        .then(data => {
+          resolve(data);
+        })
+        .catch(error => {
+          reject('Error searching for Akatsuki members:', error);
+        });
+    });
+  }
